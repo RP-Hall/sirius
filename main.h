@@ -14,8 +14,12 @@ typedef struct Robot_Config
 
 typedef struct botPacket
 {
-    Robot_Config myRobot;
     char preamble;
+    char info_byte;
+    Robot_Config myRobot;
 }botPacket;
+
+int L1 = 60;
+int L2 = 72;
 
 #endif
