@@ -4,7 +4,7 @@
 #include <sys/time.h>
 #include <unistd.h>
 #include "main.h"
-#include "inverseKinematics.h"
+#include "lut.h"
 
 botPacket command;
 
