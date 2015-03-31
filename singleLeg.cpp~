@@ -1,8 +1,6 @@
 
 #include "singleLeg.h"
 
-extern int L1,L2;
-
 int getSpiderGaitTheta1(double x,double y,double z)
 {
     return int(180*(atan2(y,x))/PI);
