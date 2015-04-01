@@ -98,19 +98,22 @@ int main(int argc, char **argv)
 	}
 	int angle[4];
 	Leg_Config leg[4];
-        for(int i=0;i<4;i++)
-	{
-	    for(int j=0;j<4;j++)
-	    {
-		scanf("%d",&angle[j]);
-	    }
-	    leg[i] = makeLeg(angle[0],angle[1],angle[2],angle[3]);
-	}
-	Robot_Config myRobot = makeRobot(leg[0],leg[1],leg[2],leg[3]);
-
-//	sendCommand(myRobot);
-	sendBrokenPacket(myRobot);
-
+	for (int k = 0; k < 9; k++)
+	  {
+	    for(int i=0;i<4;i++)
+	      {
+		for(int j=0;j<4;j++)
+		  {
+		    scanf("%d",&angle[j]);
+		  }
+		leg[i] = makeLeg(angle[0],angle[1],angle[2],angle[3]);
+	      }
+	    Robot_Config myRobot = makeRobot(leg[0],leg[1],leg[2],leg[3]);
+	    
+	    sendCommand(myRobot);
+	    //sendBrokenPacket(myRobot);
+	    usleep(700000);
+	  }
 //	printf("%d",getAngle(153));
 	
 	return 0;
