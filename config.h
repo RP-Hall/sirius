@@ -1,10 +1,12 @@
 #ifndef _CONFIG_H
 #define _CONFIG_H
 
+#include <stdint.h>
+
 //Struct Declaration
 typedef struct Leg_Config
 {
-  char theta[4];
+  int8_t theta[4];
 } Leg_Config;
 
 typedef struct Robot_Config
