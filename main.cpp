@@ -5,6 +5,7 @@
 #include <unistd.h>
 #include "config.h"
 #include "lut.h"
+#include "singleLeg.h"
 
 botPacket command;
 
@@ -93,7 +94,7 @@ int mat[4][5] = { { 95,75,55,35,15 }, {52,72,92,112,132}, {95,75,55,35,15}, {60,
 int main(int argc, char **argv)
 {
 
-	if(!sPort.Open("/dev/ttyUSB0", 57600))
+    /*if(!sPort.Open("/dev/ttyUSB0", 57600))
 	{
 		perror("Could not Open Serial Port s0 :");
 		exit(0);
@@ -122,8 +123,9 @@ int main(int argc, char **argv)
 	    sendCommand(myRobot);
 
 	    usleep(1000000);
-	 }
-//	printf("%d",getAngle(153));
+	    } */
+    Leg_Config leg1 = getDogGaitTheta(212,0,0);;
+    printf("%d %d %d ",leg1.theta[0],leg1.theta[1],leg1.theta[2]);
 	
-	return 0;
+    return 0;
 }
