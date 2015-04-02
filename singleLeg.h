@@ -18,5 +18,10 @@ int getSpiderGaitTheta2(double x,double y,double z);;
 
 int getSpiderGaitTheta3(double x,double y,double z);
 
+int getDogGaitTheta1(double x,double y);
+
+int getDogGaitTheta2(double x,double y);
+
+int getDogGaitTheta3(double x,double y);
 
 #endif
