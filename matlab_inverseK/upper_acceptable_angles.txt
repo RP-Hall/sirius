@@ -20,3 +20,10 @@ acceptable angles calculated from matlab
 -1 76 15 97 
 -1 76 15 203 
 
+acceptable angles calculated from matlab 
+-120 
+-1 2 52 56 
+-1 2 52 244 
+-1 2 52 56 
+-1 2 52 244 
+
