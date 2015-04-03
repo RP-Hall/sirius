@@ -5,9 +5,6 @@ l1 = 33;
 l2 = 60;
 l3 = 74;
 
-x = 0;
-y = -120;
-phi = -60;
 
 fileID_angles = fopen('acceptable_angles.txt','w');
 fprintf(fileID_angles,'%s \n','acceptable angles calculated from matlab');
@@ -16,9 +13,11 @@ fprintf(fileID_angles,'%s \n','acceptable angles calculated from matlab');
 
 num_packets = 0;
 phi = -116;
-for y = -135:-1:-136
+y_lower = -136;
+y_upper = -130;
+y = -136;
     fprintf(fileID_angles,'%d \n',y);
-    for x= -29:14.5:29
+    for x= -29:7.25:29
         [theta,load] = inversekinematics(x,y,phi);
         if(load)
             continue;
@@ -39,7 +38,7 @@ for y = -135:-1:-136
         
         num_packets = num_packets+1;
     end
-end
+
 fclose(fileID_angles);
 num_packets
 
