@@ -20,15 +20,16 @@ for phi = 0:-1:-180
     if(load)
         continue;
     end
-    
+     
     %     fileID = fopen('acceptable_angles.txt','a');
+    fprintf(fileID_angles,'%d \n',phi);
     for i = 1:4
         if(~mod(i,2))
-            theta_out = [round(angle_conversion_even(theta)),phi];
+            theta_out = round(angle_conversion_even(theta));
             fprintf(fileID_angles,'%d ',theta_out);
             fprintf(fileID_angles,'\n');
         else
-            theta_out = [round(angle_conversion_odd(theta)),phi];
+            theta_out = round(angle_conversion_odd(theta));
             fprintf(fileID_angles,'%d ',theta_out);
             fprintf(fileID_angles,'\n');
         end
