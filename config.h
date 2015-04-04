@@ -4,7 +4,7 @@
 #include <stdint.h>
 #define PI 3.1416
 
-#define MAX_PACKETS 10
+#define MAX_PACKETS 15
 //Struct Declaration
 typedef struct Leg_Config
 {
@@ -26,7 +26,7 @@ typedef struct botPacket
 typedef struct Gait
 {
 	int num_packets;
-	Robot_Config[MAX_PACKETS];
+	Robot_Config packets[MAX_PACKETS];
 }Gait;
 
 
