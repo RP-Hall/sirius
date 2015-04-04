@@ -3,6 +3,7 @@
 
 #include <stdint.h>
 
+#define MAX_PACKETS 10
 //Struct Declaration
 typedef struct Leg_Config
 {
@@ -20,6 +21,12 @@ typedef struct botPacket
     char info_byte;
     Robot_Config myRobot;
 }botPacket;
+
+typedef struct Gait
+{
+	int num_packets;
+	Robot_Config[MAX_PACKETS];
+}Gait;
 
 
 
