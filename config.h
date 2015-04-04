@@ -23,12 +23,12 @@ typedef struct botPacket
     Robot_Config myRobot;
 }botPacket;
 
-/*typedef struct Gait
+typedef struct Gait
 {
 	int num_packets;
 	Robot_Config packets[MAX_PACKETS];
 }Gait;
-*/
+
 
 
 #endif
