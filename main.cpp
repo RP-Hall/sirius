@@ -11,6 +11,14 @@ botPacket command;
 
 Serial sPort;
 
+typedef struct rollCommand
+{
+    int preamble;
+    char ch;
+}rollCommand;
+
+rollCommand rollComm;
+
 Leg_Config makeLeg(int theta1,int theta2,int theta3,int theta4)
 {
     Leg_Config leg;
@@ -40,6 +48,14 @@ void sendCommand(Robot_Config myRobot,int pre)
     command.myRobot = myRobot;
 
     sPort.Write(&command, sizeof(botPacket));
+}
+
+void sendRollCommand(char ch,int pre)
+{
+    rollComm.preamble = pre;
+    //command.info_byte = 0b00000000;
+    rollComm.ch = ch;
+    sPort.Write(&rollComm, sizeof(rollCommand));
 }
 /*
 void sendBrokenPacket(Robot_Config myRobot)
@@ -111,23 +127,31 @@ int main(int argc, char **argv)
     for (int k = 0; k < num_packets; k++)
     {
 	scanf("%d",&pre);
-	for(int i=0;i<4;i++)
+	if(pre == 170)
 	{
-	    for(int j=0;j<4;j++)
+	    for(int i=0;i<4;i++)
 	    {
-		if(j==0)
+		for(int j=0;j<4;j++)
 		{
-		    scanf("%d",&t);
-		    angle[j] = mat[i][t+2];
+		    if(j==0)
+		    {
+			scanf("%d",&t);
+			angle[j] = mat[i][t+2];
+		    }
+		    else scanf("%d",&angle[j]);
 		}
-		else scanf("%d",&angle[j]);
-	    }
 		leg[i] = makeLeg(angle[0],angle[1],angle[2],angle[3]);
+	    }
+	    Robot_Config myRobot = makeRobot(leg[0],leg[1],leg[2],leg[3]);   
+      
+	    sendCommand(myRobot, pre);
 	}
-      Robot_Config myRobot = makeRobot(leg[0],leg[1],leg[2],leg[3]);
-      
-      sendCommand(myRobot, pre);
-      
+	if(pre ==187)
+	{
+	    char ch;
+	    scanf("%c",&ch);
+	    sendRollCommand(ch,pre);
+	}
       usleep(1000000);
     } 
   //Leg_Config leg1 = getDogGaitTheta(113.9725, -113.9398, 0);
