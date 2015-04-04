@@ -33,9 +33,9 @@ Robot_Config makeRobot(Leg_Config leg1,Leg_Config leg2,Leg_Config leg3,Leg_Confi
     return myRobot;
 }
 
-void sendCommand(Robot_Config myRobot)
+void sendCommand(Robot_Config myRobot, int pre)
 {
-    command.preamble = 0xaa;
+    command.preamble = pre;
     command.info_byte = 0b00000000;
     command.myRobot = myRobot;
 
@@ -100,11 +100,13 @@ int main(int argc, char **argv)
       exit(0);
     }
   int angle[4];
+  int pre
   Leg_Config leg[4];
   int num_packets,t;
   scanf("%d",&num_packets);
   for (int k = 0; k < num_packets; k++)
     {
+      pre = scanf("%d", &pre);
       for(int i=0;i<4;i++)
 	{
 	  for(int j=0;j<4;j++)
@@ -120,7 +122,7 @@ int main(int argc, char **argv)
 	}
       Robot_Config myRobot = makeRobot(leg[0],leg[1],leg[2],leg[3]);
       
-      sendCommand(myRobot);
+      sendCommand(myRobot, pre);
       
       usleep(1000000);
     } 
