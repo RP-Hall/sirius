@@ -1,9 +1,9 @@
 #include "config.h"
 
 
-int L1 = 60;
-int L2 = 72;
-int L3 = 80;
+int L1 = 33;
+int L2 = 60;
+int L3 = 74;
 
 //Gait lef_rotationGait,spiderForward,spiderBackward,littledog_gait,littledog_quasigait;
 typedef struct Gait

@@ -2,6 +2,7 @@
 #define _CONFIG_H
 
 #include <stdint.h>
+#define PI 3.1416
 
 #define MAX_PACKETS 15
 //Struct Declaration

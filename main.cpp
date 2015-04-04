@@ -89,7 +89,7 @@ void sendBrokenPacket(Robot_Config myRobot)
 
 }
 
-int mat[4][5] = { { 95,75,55,35,15 }, {52,72,92,112,132}, {95,75,55,35,15}, {60,80,100,120,140}};
+int mat[4][5] = { { 111,89,71,51,31 }, {69,89,109,129,149}, {112,92,72,52,32}, {69,89,109,129,149}};
 
 int main(int argc, char **argv)
 {
@@ -133,4 +133,5 @@ int main(int argc, char **argv)
     //   printf("%d %d %d ",leg1.theta[0],leg1.theta[1],leg1.theta[2]);
 	
     return 0;
+
 }
