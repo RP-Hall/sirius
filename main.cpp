@@ -33,11 +33,7 @@ Robot_Config makeRobot(Leg_Config leg1,Leg_Config leg2,Leg_Config leg3,Leg_Confi
     return myRobot;
 }
 
-<<<<<<< HEAD
-void sendCommand(Robot_Config myRobot, int pre)
-=======
 void sendCommand(Robot_Config myRobot,int pre)
->>>>>>> 03447059a887ac0cca9280a72623fa6c17528166
 {
     command.preamble = pre;
     command.info_byte = 0b00000000;
@@ -45,7 +41,7 @@ void sendCommand(Robot_Config myRobot,int pre)
 
     sPort.Write(&command, sizeof(botPacket));
 }
-
+/*
 void sendBrokenPacket(Robot_Config myRobot)
 {
     Robot_Config newRobot;
@@ -77,7 +73,7 @@ void sendBrokenPacket(Robot_Config myRobot)
 	    leg[i] = makeLeg(newRobot.leg[i].theta[0],newRobot.leg[i].theta[1],newRobot.leg[i].theta[2],newRobot.leg[i].theta[3]);
 	}
 	Robot_Config sendRobot = makeRobot(leg[0],leg[1],leg[2],leg[3]);
-	sendCommand(sendRobot);
+	///sendCommand(sendRobot);
 	//usleep(1500000);
     }
     for(int i=0;i<4;i++)
@@ -92,7 +88,7 @@ void sendBrokenPacket(Robot_Config myRobot)
     sendCommand(sendRobot);
 
 }
-
+*/
 int mat[4][5] = { { 111,89,71,51,31 }, {69,89,109,129,149}, {112,92,72,52,32}, {69,89,109,129,149}};
 
 int main(int argc, char **argv)
@@ -103,17 +99,6 @@ int main(int argc, char **argv)
 	perror("Could not Open Serial Port s0 :");
 	exit(0);
     }
-<<<<<<< HEAD
-  int angle[4];
-  int pre
-  Leg_Config leg[4];
-  int num_packets,t;
-  scanf("%d",&num_packets);
-  for (int k = 0; k < num_packets; k++)
-    {
-      pre = scanf("%d", &pre);
-      for(int i=0;i<4;i++)
-=======
     int angle[4];
     Leg_Config leg[4];
     int num_packets,t;
@@ -127,7 +112,6 @@ int main(int argc, char **argv)
     {
 	scanf("%d",&pre);
 	for(int i=0;i<4;i++)
->>>>>>> 03447059a887ac0cca9280a72623fa6c17528166
 	{
 	    for(int j=0;j<4;j++)
 	    {
@@ -140,7 +124,6 @@ int main(int argc, char **argv)
 	    }
 		leg[i] = makeLeg(angle[0],angle[1],angle[2],angle[3]);
 	}
-<<<<<<< HEAD
       Robot_Config myRobot = makeRobot(leg[0],leg[1],leg[2],leg[3]);
       
       sendCommand(myRobot, pre);
@@ -151,17 +134,4 @@ int main(int argc, char **argv)
   //printf("%d %d %d %d\n",leg1.theta[0],leg1.theta[1],leg1.theta[2], leg1.theta[3]);
   
   return 0;
-=======
-	Robot_Config myRobot = makeRobot(leg[0],leg[1],leg[2],leg[3]);
-	
-	sendCommand(myRobot,pre);
-
-	usleep(1000000);
-     } 
-//    Leg_Config leg1 = getDogGaitTheta(212,0,0);;
-    //   printf("%d %d %d ",leg1.theta[0],leg1.theta[1],leg1.theta[2]);
-	
-    return 0;
-
->>>>>>> 03447059a887ac0cca9280a72623fa6c17528166
 }
