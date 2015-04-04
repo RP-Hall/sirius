@@ -94,38 +94,43 @@ int mat[4][5] = { { 95,75,55,35,15 }, {52,72,92,112,132}, {95,75,55,35,15}, {60,
 int main(int argc, char **argv)
 {
 
-    /*if(!sPort.Open("/dev/ttyUSB0", 57600))
+    if(!sPort.Open("/dev/ttyUSB0", 57600))
+    {
+	perror("Could not Open Serial Port s0 :");
+	exit(0);
+    }
+    int angle[4];
+    Leg_Config leg[4];
+    int num_packets,t;
+    char ch = argv[1][0];
+    sPort.WriteByte(ch);
+    
+    /*
+    scanf("%d",&num_packets);
+    
+    for (int k = 0; k < num_packets; k++)
+    {
+	for(int i=0;i<4;i++)
 	{
-		perror("Could not Open Serial Port s0 :");
-		exit(0);
-	}
-	int angle[4];
-	Leg_Config leg[4];
-	int num_packets,t;
-	scanf("%d",&num_packets);
-	for (int k = 0; k < num_packets; k++)
-	{
-	    for(int i=0;i<4;i++)
+	    for(int j=0;j<4;j++)
 	    {
-		for(int j=0;j<4;j++)
+		if(j==0)
 		{
-		    if(j==0)
-		    {
-			scanf("%d",&t);
-			angle[j] = mat[i][t+2];
-		    }
-		    else scanf("%d",&angle[j]);
+		    scanf("%d",&t);
+		    angle[j] = mat[i][t+2];
 		}
-		leg[i] = makeLeg(angle[0],angle[1],angle[2],angle[3]);
+		else scanf("%d",&angle[j]);
 	    }
-	    Robot_Config myRobot = makeRobot(leg[0],leg[1],leg[2],leg[3]);
-	    
-	    sendCommand(myRobot);
+		leg[i] = makeLeg(angle[0],angle[1],angle[2],angle[3]);
+	}
+	Robot_Config myRobot = makeRobot(leg[0],leg[1],leg[2],leg[3]);
+	
+	sendCommand(myRobot);
 
-	    usleep(1000000);
-	    } */
-    Leg_Config leg1 = getDogGaitTheta(212,0,0);;
-    printf("%d %d %d ",leg1.theta[0],leg1.theta[1],leg1.theta[2]);
+	usleep(1000000);
+     } */
+//    Leg_Config leg1 = getDogGaitTheta(212,0,0);;
+    //   printf("%d %d %d ",leg1.theta[0],leg1.theta[1],leg1.theta[2]);
 	
     return 0;
 }
