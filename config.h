@@ -2,6 +2,7 @@
 #define _CONFIG_H
 
 #include <stdint.h>
+#define PI 3.1416
 
 //Struct Declaration
 typedef struct Leg_Config

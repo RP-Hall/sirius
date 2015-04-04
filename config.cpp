@@ -1,7 +1,7 @@
 #include "config.h"
 
 
-int L1 = 60;
-int L2 = 72;
-int L3 = 80;
+int L1 = 33;
+int L2 = 60;
+int L3 = 74;
 
