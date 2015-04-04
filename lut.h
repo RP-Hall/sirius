@@ -6,7 +6,7 @@
 #include <math.h>
 #include "config.h"
 
-#define PI 3.14159265
+//#define PI 3.1416
 
 int nrst_num(int lo, int hi, int key);
 

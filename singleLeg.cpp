@@ -1,5 +1,6 @@
 
 #include "singleLeg.h"
+#include <math.h>
 
 extern int L1,L2,L3;
 
@@ -30,24 +31,40 @@ Leg_Config getSpiderGaitTheta(double x,double y,double z,int fix)
     return leg;
 }
 
-int phi = 90;
+int phi = -60*PI/180;
 
-Leg_Config getDogGaitTheta(double x,double y,int fix)
+Leg_Config getDogGaitTheta(double x,double y, int fix)
 {
+    printf("x = %f y = %f\n", x, y);
     Leg_Config leg;
+    double x_prime = x - L3*cos(phi);
+    double y_prime = y - L3*sin(phi);
+    printf("x_prime = %f y_prime = %f sin(30) = %f\n", x_prime, y_prime, sin(phi));
+
+    double c = ((x_prime*x_prime) + (y_prime*y_prime) - (L1*L1) - (L2*L2))/(2*L1*L2);
+    double s1 = sqrt(1 - (c*c));
+    double s2 = -s1;
+    printf("s1 = %f s2 = %f\n", s1, s2);
+
+    //leg.theta[1] = int(180*atan2(s1, c)/PI);
     
-    double x_prime = x - (L3*cos(phi*PI/180));
-    double y_prime = y - (L3*sin(phi*PI/180));
-    double costheta2 = ((x_prime*x_prime)+(y_prime*y_prime)-(L1*L1)-(L2*L2))/(2*L1*L2);
-    leg.theta[1] = int(180*acos(costheta2)/PI);
+      if ((180*atan2(s1, c)/PI < 0 && 180*atan2(s1, c)/PI > -90))
+      {
+      	leg.theta[1] = int(180*atan2(s1, c)/PI);
+      }
+      else
+        {
+      	leg.theta[1] = int(180*atan2(s2, c)/PI);
+        }
 
     double k1 = L1 + (L2*cos(leg.theta[1]*PI/180));
     double k2 = L2*sin(leg.theta[1]*PI/180);
-    leg.theta[0] = int((180*atan2(y,x)/PI)-(180*atan2(k2,k1)));
 
-    leg.theta[2] = phi-leg.theta[0]-leg.theta[1];
+    leg.theta[4] = 180*(atan2(y_prime, x_prime) - atan2(k2, k1))/PI;
 
-    leg.theta[3] = 0;
+    leg.theta[3] = 180*(atan2(y, x) - atan2(k2, k1))/PI;
+
+    leg.theta[0] = -1;
     
     return leg;
 }
