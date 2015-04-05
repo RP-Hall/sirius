@@ -13,7 +13,7 @@ Serial sPort;
 
 typedef struct rollCommand
 {
-    int preamble;
+    char preamble;
     char ch;
 }rollCommand;
 
@@ -105,6 +105,7 @@ void sendBrokenPacket(Robot_Config myRobot)
 
 }
 */
+
 int mat[4][5] = { { 111,89,71,51,31 }, {69,89,109,129,149}, {112,92,72,52,32}, {69,89,109,129,149}};
 
 int main(int argc, char **argv)
@@ -149,7 +150,9 @@ int main(int argc, char **argv)
 	if(pre ==187)
 	{
 	    char ch;
-	    scanf("%c",&ch);
+	    scanf(" %c",&ch);
+	    //printf("%c", ch);
+	    //ch = 'w';
 	    sendRollCommand(ch,pre);
 	}
       usleep(1000000);
