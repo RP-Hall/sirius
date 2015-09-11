@@ -1,7 +1,0 @@
-acceptable angles calculated from matlab 
--100 
--1 2 27 43 
--1 2 27 257 
--1 2 27 43 
--1 2 27 257 
-
