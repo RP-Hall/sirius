@@ -7,12 +7,16 @@
 
 [![Sirius Video](http://img.youtube.com/vi/tceGkQNUUpM/0.jpg)](https://youtu.be/tceGkQNUUpM)
 
+##Presentation
+[![Sirius Presentation](https://upload.wikimedia.org/wikipedia/commons/7/7e/Sirius-ppt.png)](http://www.slideshare.net/soumyadeepmukherjee17/hm2015-52970964)
 
 ##System Design
 
-The following two pictures describe the system design.
+The following picture describe the system design of the robot:
 
 ![Overall-Architecture](https://upload.wikimedia.org/wikipedia/commons/0/01/Flowchart_detailed.png)
+
+The following picture describes the control inputs to the robot:
 
 ![Control-Architecture](https://upload.wikimedia.org/wikipedia/commons/9/9d/Lcd-architecture.png)
 
@@ -81,7 +85,6 @@ C++ Code for sending angles via serial communication.
 * serial.h serial.cpp: Serial Implementation
 
 
-
 ##Mechanical Design
 All Solidworks Parts are uploaded.
 
@@ -90,3 +93,12 @@ All Solidworks Parts are uploaded.
 ![Sirius Wheel Design](https://upload.wikimedia.org/wikipedia/commons/6/6e/WheelSirius.jpg)
 
 ##References
+
+[1] Kenjiro TADAKUMA(Osaka Univ.) et. al, Mechanical Design of the Wheel-Leg Hybrid Mobile Robot to Realize a Large Wheel Diameter. IEEE/RSJ International Conference on Intelligent Robots and Systems, Taipei, Taiwan, 2010  
+[2] Carlos Queiroz, Nuno Gon ?calves and Paulo Menezes, A study on Static Gaits for a Four Leg Robot, CONTROL 2000, International Conference on, At Cambridge, UK  
+[3] Nils Brynedal Ignell,Niclas Rasmusson and Johan Matsson, An overview of legged and wheeled robotic locomotion. IRCSE ’12. IDT Mini-conference on Interesting Results in Computer Science and Engineering, Sweden, 2012  
+[4] Raibert, M. H. Legged Robots Communications of the ACM 499, June 1986 Volume 29 Number 6 http://www.universelle-automation.de/1980 Boston.pdf  
+[5] Buckley D. 2011 http://davidbuckley.net/DB/HistoryMakers.htm  
+[6] Arikawa, K., Hirose, S., 2007 Mechanical design of walking machines Philosophical Transactions of the Royal Society A 365  
+[7] Heikkil,M.,Pietikinen,M.andSchmid,C.(2009),DescriptionofInter- est Regions with Local Binary Patterns. Pattern Recognition 42(3):425-436.  
+[8] Christian Weiss,Nikolas Fechner,Matthias Stark and Andreas Zell,Comparison of Different Approaches to Vibration-based Terrain Clas- sification, ECMR07  
