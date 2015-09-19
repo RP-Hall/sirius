@@ -1,13 +1,27 @@
-	Circuit:	Schematics for embedded sub-systems
-		All files (except ckts.jpg) are opened with 'Proteus' software
-		ckts.jpg: Snapshot of schematic
-		powerSirius.pdsprj: Proteus files for schematics
+# SIRIUS - A Wheel-Leg Transfigurable Robot
 
-		Schematic contents: 
-			1. Servo power system (Left)
-			2. Robokits 16-Servo Motor Controller (Right Top)
-			3. Communication System for Dynamixel (Right Bottom)
 
+## Video
+
+[![Sirius Video](http://img.youtube.com/vi/tceGkQNUUpM/0.jpg)](https://youtu.be/tceGkQNUUpM)
+
+
+
+## Circuitry
+
+All schematics for embedded sub-systems are opened with 'Proteus' software
+
+![Image of Yaktocat](https://commons.wikimedia.org/wiki/File:Sirius-ckt.JPG)
+
+File: powerSirius.pdsprj: Proteus files for schematics
+
+Schematic contents: 
+1. Servo power system (Left)
+2. Robokits 16-Servo Motor Controller (Right Top)
+3. Communication System for Dynamixel (Right Bottom)
+
+
+## AVR Code
 	AVR: Contains codes for AtMEGA2560, Board used: AtMEGA2560 development 		board by 'Nex Robotics'
 		Gait_Testing.c: File for testing gaits and debugging
 		USART.c:	Functions for serial communication
