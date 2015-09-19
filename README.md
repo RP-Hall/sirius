@@ -1,10 +1,20 @@
 # SIRIUS - A Wheel-Leg Transfigurable Robot
 
+[!Sirius](https://upload.wikimedia.org/wikipedia/commons/b/bc/Sirius-robot.jpg)
+
 
 ## Video
 
 [![Sirius Video](http://img.youtube.com/vi/tceGkQNUUpM/0.jpg)](https://youtu.be/tceGkQNUUpM)
 
+
+##System Design
+
+The following two pictures describe the system design.
+
+[!Overall Architecture](https://upload.wikimedia.org/wikipedia/commons/0/01/Flowchart_detailed.png)
+
+[!Control Architecture](https://upload.wikimedia.org/wikipedia/commons/9/9d/Lcd-architecture.png)
 
 
 ## Circuitry
@@ -57,13 +67,13 @@ Board used: [AtMEGA2560 Development Board](http://www.nex-robotics.com/products/
 	** rawtoimage.m: MATLAB function to convert binary to image jpg
 
 * matlab_inverse_kinematics:
-	** acceptable_angles.txt: Text File to store acceptable angles after Gait Generation
-	** angle_conversion_even.m: Convert Angles according to contraints for even angles
-	** angle_conversion_odd: Convert Angles according to contraints for even angles
-	** gait.m: File to calculate possible gaits
-	** inversekinematics.m: Solves inverse kinematic equations
-	** packet_angles.txt: Stores the angles to be sent as packet via serial
-	** packet_generation.m: Generates packet format text file to be sent
+	* acceptable_angles.txt: Text File to store acceptable angles after Gait Generation
+	* angle_conversion_even.m: Convert Angles according to contraints for even angles
+	* angle_conversion_odd: Convert Angles according to contraints for even angles
+	* gait.m: File to calculate possible gaits
+	* inversekinematics.m: Solves inverse kinematic equations
+	* packet_angles.txt: Stores the angles to be sent as packet via serial
+	* packet_generation.m: Generates packet format text file to be sent
 
 ###Serial_Testing
 C++ Code for sending angles via serial communication.
@@ -73,3 +83,10 @@ C++ Code for sending angles via serial communication.
 
 
 ##Mechanical Design
+All Solidworks Parts are uploaded.
+
+![Sirius Mechanical Design](https://upload.wikimedia.org/wikipedia/commons/8/82/MechD-sirius.jpg)
+
+![Sirius Wheel Design](https://upload.wikimedia.org/wikipedia/commons/6/6e/WheelSirius.jpg)
+
+##References
