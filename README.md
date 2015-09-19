@@ -5,7 +5,7 @@
 
 ## Video
 
-![[Sirius Video](http://img.youtube.com/vi/tceGkQNUUpM/0.jpg)](https://youtu.be/tceGkQNUUpM)
+[![Sirius Video](http://img.youtube.com/vi/tceGkQNUUpM/0.jpg)](https://youtu.be/tceGkQNUUpM)
 
 
 ##System Design
