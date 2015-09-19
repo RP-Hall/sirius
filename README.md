@@ -1,20 +1,20 @@
 # SIRIUS - A Wheel-Leg Transfigurable Robot
 
-[!Sirius](https://upload.wikimedia.org/wikipedia/commons/b/bc/Sirius-robot.jpg)
+![Sirius](https://upload.wikimedia.org/wikipedia/commons/b/bc/Sirius-robot.jpg)
 
 
 ## Video
 
-[![Sirius Video](http://img.youtube.com/vi/tceGkQNUUpM/0.jpg)](https://youtu.be/tceGkQNUUpM)
+![[Sirius Video](http://img.youtube.com/vi/tceGkQNUUpM/0.jpg)](https://youtu.be/tceGkQNUUpM)
 
 
 ##System Design
 
 The following two pictures describe the system design.
 
-[!Overall Architecture](https://upload.wikimedia.org/wikipedia/commons/0/01/Flowchart_detailed.png)
+![Overall-Architecture](https://upload.wikimedia.org/wikipedia/commons/0/01/Flowchart_detailed.png)
 
-[!Control Architecture](https://upload.wikimedia.org/wikipedia/commons/9/9d/Lcd-architecture.png)
+![Control-Architecture](https://upload.wikimedia.org/wikipedia/commons/9/9d/Lcd-architecture.png)
 
 
 ## Circuitry
