@@ -102,3 +102,24 @@ All Solidworks Parts are uploaded.
 [6] Arikawa, K., Hirose, S., 2007 Mechanical design of walking machines Philosophical Transactions of the Royal Society A 365  
 [7] Heikkil,M.,Pietikinen,M.andSchmid,C.(2009),DescriptionofInter- est Regions with Local Binary Patterns. Pattern Recognition 42(3):425-436.  
 [8] Christian Weiss,Nikolas Fechner,Matthias Stark and Andreas Zell,Comparison of Different Approaches to Vibration-based Terrain Clas- sification, ECMR07  
+
+
+##Team
+* Captains
+	* Aditya Tiwari
+	* Diwakar Paliwal
+	* Vinay Varma
+	* Sai Prasad Arkal
+* Rest
+	* Keshav Sarraf
+	* Soumyadeep Mukherjee
+	* Rishal Raj
+	* Vishnu Sharma
+	* Aman Gupta
+	* Nipurn Gulgulia
+	* Raushan Kumar
+	* Kawaljeet Kumar
+	* Divya Prakash
+	* Seemant Jay
+	* Rahul Singh
+	* Kumar Abhinav
