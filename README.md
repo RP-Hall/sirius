@@ -7,10 +7,10 @@
 
 [![Sirius Video](http://img.youtube.com/vi/tceGkQNUUpM/0.jpg)](https://youtu.be/tceGkQNUUpM)
 
-##Presentation
+## Presentation
 [![Sirius Presentation](https://upload.wikimedia.org/wikipedia/commons/7/7e/Sirius-ppt.png)](http://www.slideshare.net/soumyadeepmukherjee17/hm2015-52970964)
 
-##System Design
+## System Design
 
 The following picture describe the system design of the robot:
 
@@ -40,7 +40,7 @@ Schematic contents:
 Controller:  AtMEGA2560
 Board used: [AtMEGA2560 Development Board](http://www.nex-robotics.com/products/microcontroller-development-boards/atmega2560-development-board.html)
 
-###AVR
+### AVR
 * Gait_Testing.c: File for testing gaits and debugging
 * USART.c:	Functions for serial communication
 * usart.h: 	Header for USART.c
@@ -52,7 +52,7 @@ Board used: [AtMEGA2560 Development Board](http://www.nex-robotics.com/products/
 * motion.h motion.c:	Files for motion of legs
 * roboservo.h roboservo.c:	File for running servo motors
 
-###Gaits
+### Gaits
 * backspider: Spider gait backwards
 * home:	Home orientations
 * littledog_gait: Dog gait
@@ -61,7 +61,7 @@ Board used: [AtMEGA2560 Development Board](http://www.nex-robotics.com/products/
 * rotation_gait: Rotation
 * spiderwalk: Spider gait
 
-###MATLAB
+### MATLAB
 
 * matlab_camera:
 	** camera.m: Gets camera feed
@@ -79,20 +79,20 @@ Board used: [AtMEGA2560 Development Board](http://www.nex-robotics.com/products/
 	* packet_angles.txt: Stores the angles to be sent as packet via serial
 	* packet_generation.m: Generates packet format text file to be sent
 
-###Serial_Testing
+### Serial_Testing
 C++ Code for sending angles via serial communication.
 * main.cpp:	main process
 * serial.h serial.cpp: Serial Implementation
 
 
-##Mechanical Design
+## Mechanical Design
 All Solidworks Parts are uploaded.
 
 ![Sirius Mechanical Design](https://upload.wikimedia.org/wikipedia/commons/8/82/MechD-sirius.jpg)
 
 ![Sirius Wheel Design](https://upload.wikimedia.org/wikipedia/commons/6/6e/WheelSirius.jpg)
 
-##References
+## References
 
 [1] Kenjiro TADAKUMA(Osaka Univ.) et. al, Mechanical Design of the Wheel-Leg Hybrid Mobile Robot to Realize a Large Wheel Diameter. IEEE/RSJ International Conference on Intelligent Robots and Systems, Taipei, Taiwan, 2010  
 [2] Carlos Queiroz, Nuno Gon ?calves and Paulo Menezes, A study on Static Gaits for a Four Leg Robot, CONTROL 2000, International Conference on, At Cambridge, UK  
@@ -104,7 +104,7 @@ All Solidworks Parts are uploaded.
 [8] Christian Weiss,Nikolas Fechner,Matthias Stark and Andreas Zell,Comparison of Different Approaches to Vibration-based Terrain Clas- sification, ECMR07  
 
 
-##Team
+## Team
 * Captains
 	* Aditya Tiwari
 	* Diwakar Paliwal
